@@ -154,6 +154,49 @@
                     
                     content.appendChild(actDiv);
                 }
+                
+                // Handle Interludes
+                const interludes = xmlDoc.getElementsByTagName('interludes')[0];
+                if (interludes) {
+                    const interludeDiv = document.createElement('div');
+                    interludeDiv.className = 'act';
+                    
+                    const interludeHeader = document.createElement('div');
+                    interludeHeader.className = 'act-header';
+                    interludeHeader.style.cursor = 'pointer';
+                    
+                    const interludeTitle = document.createElement('div');
+                    interludeTitle.className = 'act-title';
+                    interludeTitle.textContent = 'Interludes';
+                    
+                    const interludeToggle = document.createElement('span');
+                    interludeToggle.className = 'act-toggle';
+                    interludeToggle.textContent = '▶';
+                    
+                    interludeHeader.appendChild(interludeToggle);
+                    interludeHeader.appendChild(interludeTitle);
+                    interludeDiv.appendChild(interludeHeader);
+                    
+                    const interludeContent = document.createElement('div');
+                    interludeContent.className = 'act-content';
+                    interludeContent.style.display = 'none';
+                    
+                    const interludeEmpty = document.createElement('div');
+                    interludeEmpty.className = 'empty-act';
+                    interludeEmpty.textContent = 'Content coming soon...';
+                    interludeContent.appendChild(interludeEmpty);
+                    
+                    interludeDiv.appendChild(interludeContent);
+                    
+                    // Add click handler to toggle expand/collapse
+                    interludeHeader.addEventListener('click', () => {
+                        const isOpen = interludeContent.style.display !== 'none';
+                        interludeContent.style.display = isOpen ? 'none' : 'block';
+                        interludeToggle.textContent = isOpen ? '▶' : '▼';
+                    });
+                    
+                    content.appendChild(interludeDiv);
+                }
             } catch (error) {
                 const content = document.getElementById('content');
                 content.innerHTML = `<div class="error">Error loading guide: ${error.message}<br><br>Make sure poe2_act_guide.xml is in the same directory as this HTML file.</div>`;
