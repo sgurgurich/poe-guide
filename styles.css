@@ -160,11 +160,12 @@ h1 {
 
 /* Step Styling */
 .step {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     background: var(--bg-tertiary);
-    padding: 12px;
-    border-radius: 4px;
+    padding: 10px 12px;
+    border-radius: 3px;
     border: 1px solid var(--border-color);
+    text-align: left;
 }
 
 .step::before {
