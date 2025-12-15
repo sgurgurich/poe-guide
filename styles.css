@@ -79,7 +79,6 @@ h1 {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 8px;
-    transition: var(--transition);
 }
 
 .theme-btn {
@@ -91,7 +90,6 @@ h1 {
     cursor: pointer;
     font-size: 0.9em;
     font-weight: 500;
-    transition: var(--transition);
     white-space: nowrap;
 }
 
@@ -139,6 +137,7 @@ h1 {
     border-radius: 6px;
     border-bottom: 1px solid var(--border-color);
     user-select: none;
+    transition: none;
 }
 
 .act-header:hover {
@@ -173,7 +172,6 @@ h1 {
     padding: 12px;
     border-radius: 4px;
     border: 1px solid var(--border-color);
-    transition: var(--transition);
 }
 
 .step::before {
@@ -217,7 +215,6 @@ h1 {
     color: var(--text-secondary);
     position: relative;
     font-size: 0.9em;
-    transition: var(--transition);
 }
 
 .objective:hover {
