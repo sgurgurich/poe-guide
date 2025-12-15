@@ -77,10 +77,25 @@
                     const actDiv = document.createElement('div');
                     actDiv.className = 'act';
                     
+                    const actHeader = document.createElement('div');
+                    actHeader.className = 'act-header';
+                    actHeader.style.cursor = 'pointer';
+                    
                     const actTitle = document.createElement('div');
                     actTitle.className = 'act-title';
                     actTitle.textContent = `Act ${actNumber}`;
-                    actDiv.appendChild(actTitle);
+                    
+                    const actToggle = document.createElement('span');
+                    actToggle.className = 'act-toggle';
+                    actToggle.textContent = '▼';
+                    
+                    actHeader.appendChild(actToggle);
+                    actHeader.appendChild(actTitle);
+                    actDiv.appendChild(actHeader);
+                    
+                    const actContent = document.createElement('div');
+                    actContent.className = 'act-content';
+                    actContent.style.display = 'block';
                     
                     const steps = act.getElementsByTagName('step');
                     
@@ -88,7 +103,7 @@
                         const emptyDiv = document.createElement('div');
                         emptyDiv.className = 'empty-act';
                         emptyDiv.textContent = 'Content coming soon...';
-                        actDiv.appendChild(emptyDiv);
+                        actContent.appendChild(emptyDiv);
                     } else {
                         for (let step of steps) {
                             const stepNumber = step.getAttribute('number');
@@ -124,9 +139,18 @@
                                 stepDiv.appendChild(objectivesDiv);
                             }
                             
-                            actDiv.appendChild(stepDiv);
+                            actContent.appendChild(stepDiv);
                         }
                     }
+                    
+                    actDiv.appendChild(actContent);
+                    
+                    // Add click handler to toggle expand/collapse
+                    actHeader.addEventListener('click', () => {
+                        const isOpen = actContent.style.display !== 'none';
+                        actContent.style.display = isOpen ? 'none' : 'block';
+                        actToggle.textContent = isOpen ? '▶' : '▼';
+                    });
                     
                     content.appendChild(actDiv);
                 }
