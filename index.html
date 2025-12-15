@@ -106,6 +106,7 @@
                         actContent.appendChild(emptyDiv);
                     } else {
                         for (let step of steps) {
+                            const stepNumber = step.getAttribute('number');
                             const nameEl = step.getElementsByTagName('name')[0];
                             const name = nameEl ? nameEl.textContent : 'Unnamed';
                             
@@ -114,7 +115,7 @@
                             
                             const stepNameDiv = document.createElement('div');
                             stepNameDiv.className = 'step-name';
-                            stepNameDiv.textContent = name;
+                            stepNameDiv.textContent = `${stepNumber}) ${name}`;
                             stepDiv.appendChild(stepNameDiv);
                             
                             const objectivesEl = step.getElementsByTagName('objectives')[0];
