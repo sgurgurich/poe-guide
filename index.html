@@ -115,7 +115,19 @@
                             
                             const stepNameDiv = document.createElement('div');
                             stepNameDiv.className = 'step-name';
-                            stepNameDiv.textContent = `${stepNumber}) ${name}`;
+                            
+                            const stepCheckbox = document.createElement('input');
+                            stepCheckbox.type = 'checkbox';
+                            stepCheckbox.className = 'step-checkbox';
+                            stepCheckbox.addEventListener('change', function() {
+                                stepNameDiv.classList.toggle('completed', this.checked);
+                            });
+                            
+                            stepNameDiv.appendChild(stepCheckbox);
+                            const stepLabel = document.createElement('span');
+                            stepLabel.textContent = `${stepNumber}) ${name}`;
+                            stepNameDiv.appendChild(stepLabel);
+                            
                             stepDiv.appendChild(stepNameDiv);
                             
                             const objectivesEl = step.getElementsByTagName('objectives')[0];
@@ -127,7 +139,19 @@
                                 for (let obj of objectives) {
                                     const objItem = document.createElement('li');
                                     objItem.className = 'objective-item';
-                                    objItem.textContent = obj.textContent;
+                                    
+                                    const objCheckbox = document.createElement('input');
+                                    objCheckbox.type = 'checkbox';
+                                    objCheckbox.className = 'objective-checkbox';
+                                    objCheckbox.addEventListener('change', function() {
+                                        objItem.classList.toggle('completed', this.checked);
+                                    });
+                                    
+                                    objItem.appendChild(objCheckbox);
+                                    const objLabel = document.createElement('span');
+                                    objLabel.textContent = obj.textContent;
+                                    objItem.appendChild(objLabel);
+                                    
                                     objectivesList.appendChild(objItem);
                                 }
                                 

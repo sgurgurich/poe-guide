@@ -189,13 +189,6 @@ h1 {
     display: none;
 }
 
-.step-name {
-    font-size: 1em;
-    color: var(--text-primary);
-    font-weight: 500;
-    margin: 0;
-}
-
 /* Objectives */
 .objectives-list {
     margin: 8px 0 0 20px;
@@ -208,6 +201,49 @@ h1 {
     font-size: 0.9em;
     margin-bottom: 4px;
     line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.objective-checkbox {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.objective-item.completed {
+    opacity: 0.6;
+}
+
+.objective-item.completed span {
+    text-decoration: line-through;
+}
+
+.step-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin: 0;
+}
+
+.step-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.step-name.completed {
+    opacity: 0.6;
+}
+
+.step-name.completed span {
+    text-decoration: line-through;
 }
 
 .objective::before {
