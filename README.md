@@ -30,7 +30,11 @@ An interactive web-based guide for Path of Exile 2 acts with progress tracking a
 
 - `index.html` - Main web interface
 - `styles.css` - Styling and theming
-- `data/poe2_act_guide.xml` - Guide content structure
+- `data/act1.xml` - Act 1 guide data
+- `data/act2.xml` - Act 2 guide data
+- `data/act3.xml` - Act 3 guide data
+- `data/act4.xml` - Act 4 guide data
+- `data/interludes.xml` - Interludes data
 
 ## Getting Started
 
@@ -44,22 +48,18 @@ Then open `http://localhost:8000` in your browser.
 
 ## Data Structure
 
-Guide content is stored in `poe2_act_guide.xml` with the following structure:
+Guide content is organized in separate XML files, one per act:
 
 ```xml
-<guide>
-  <act number="1">
+<?xml version="1.0" encoding="UTF-8"?>
+<act number="1">
     <step number="1">
-      <name>Location Name</name>
-      <objectives>
-        <objective>Objective description</objective>
-      </objectives>
+        <name>Location Name</name>
+        <objectives>
+            <objective>Objective description</objective>
+        </objectives>
     </step>
-  </act>
-  <interludes>
-    <!-- Interlude content -->
-  </interludes>
-</guide>
+</act>
 ```
 
 ## Browser Compatibility
