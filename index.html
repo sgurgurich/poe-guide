@@ -19,6 +19,26 @@
     </div>
 
     <script>
+        // Checkbox State Management
+        const getCheckboxState = () => {
+            const saved = localStorage.getItem('checkboxState');
+            return saved ? JSON.parse(saved) : {};
+        };
+
+        const setCheckboxState = (id, checked) => {
+            const state = getCheckboxState();
+            if (checked) {
+                state[id] = true;
+            } else {
+                delete state[id];
+            }
+            localStorage.setItem('checkboxState', JSON.stringify(state));
+        };
+
+        const isCheckboxChecked = (id) => {
+            return getCheckboxState()[id] === true;
+        };
+
         // Theme Management
         const initializeTheme = () => {
             const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -116,11 +136,20 @@
                             const stepNameDiv = document.createElement('div');
                             stepNameDiv.className = 'step-name';
                             
+                            const stepCheckboxId = `step-${actNumber}-${stepNumber}`;
                             const stepCheckbox = document.createElement('input');
                             stepCheckbox.type = 'checkbox';
                             stepCheckbox.className = 'step-checkbox';
+                            stepCheckbox.id = stepCheckboxId;
+                            stepCheckbox.checked = isCheckboxChecked(stepCheckboxId);
+                            
+                            if (stepCheckbox.checked) {
+                                stepNameDiv.classList.add('completed');
+                            }
+                            
                             stepCheckbox.addEventListener('change', function() {
                                 stepNameDiv.classList.toggle('completed', this.checked);
+                                setCheckboxState(stepCheckboxId, this.checked);
                             });
                             
                             stepNameDiv.appendChild(stepCheckbox);
@@ -136,15 +165,25 @@
                                 objectivesList.className = 'objectives-list';
                                 
                                 const objectives = objectivesEl.getElementsByTagName('objective');
+                                let objIndex = 0;
                                 for (let obj of objectives) {
                                     const objItem = document.createElement('li');
                                     objItem.className = 'objective-item';
                                     
+                                    const objCheckboxId = `objective-${actNumber}-${stepNumber}-${objIndex}`;
                                     const objCheckbox = document.createElement('input');
                                     objCheckbox.type = 'checkbox';
                                     objCheckbox.className = 'objective-checkbox';
+                                    objCheckbox.id = objCheckboxId;
+                                    objCheckbox.checked = isCheckboxChecked(objCheckboxId);
+                                    
+                                    if (objCheckbox.checked) {
+                                        objItem.classList.add('completed');
+                                    }
+                                    
                                     objCheckbox.addEventListener('change', function() {
                                         objItem.classList.toggle('completed', this.checked);
+                                        setCheckboxState(objCheckboxId, this.checked);
                                     });
                                     
                                     objItem.appendChild(objCheckbox);
@@ -153,6 +192,7 @@
                                     objItem.appendChild(objLabel);
                                     
                                     objectivesList.appendChild(objItem);
+                                    objIndex++;
                                 }
                                 
                                 stepDiv.appendChild(objectivesList);
