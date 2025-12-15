@@ -4,142 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POE2 Act Guide</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e0e0e0;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        h1 {
-            text-align: center;
-            color: #ffd700;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .act {
-            margin-bottom: 40px;
-            border-left: 4px solid #ffd700;
-            padding-left: 20px;
-        }
-        
-        .act-title {
-            font-size: 1.8em;
-            color: #ffd700;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .act-title::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #ffd700;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        
-        .step {
-            margin-bottom: 20px;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .step:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 215, 0, 0.4);
-        }
-        
-        .step-number {
-            font-weight: bold;
-            color: #ffd700;
-            font-size: 1.1em;
-        }
-        
-        .step-name {
-            font-size: 1.2em;
-            color: #ffffff;
-            margin: 5px 0;
-        }
-        
-        .objectives {
-            margin-top: 10px;
-            margin-left: 20px;
-        }
-        
-        .objective {
-            padding: 8px 0;
-            padding-left: 15px;
-            color: #b0b0b0;
-            position: relative;
-            font-size: 0.95em;
-        }
-        
-        .objective::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #ffd700;
-            font-weight: bold;
-        }
-        
-        .empty-act {
-            color: #888;
-            font-style: italic;
-            padding: 15px;
-            text-align: center;
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #ffd700;
-            font-size: 1.2em;
-        }
-        
-        .error {
-            background: rgba(255, 0, 0, 0.1);
-            border: 1px solid rgba(255, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 5px;
-            color: #ff6b6b;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <h1>Path of Exile 2 - Act Guide</h1>
+        <div class="theme-toggle">
+            <button class="theme-btn active" data-theme="dark">Dark</button>
+            <button class="theme-btn" data-theme="light">Light</button>
+        </div>
+    </div>
+    <div class="container">
         <div id="content" class="loading">Loading guide...</div>
     </div>
 
     <script>
+        // Theme Management
+        const initializeTheme = () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            applyTheme(savedTheme);
+        };
+
+        const applyTheme = (theme) => {
+            const body = document.body;
+            const buttons = document.querySelectorAll('.theme-btn');
+            
+            if (theme === 'light') {
+                body.classList.add('light-mode');
+            } else {
+                body.classList.remove('light-mode');
+            }
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.theme === theme) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            localStorage.setItem('theme', theme);
+        };
+
+        // Theme Button Listeners
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                applyTheme(btn.dataset.theme);
+            });
+        });
+
+        // Load Guide
         async function loadGuide() {
             try {
                 const response = await fetch('poe2_act_guide.xml');
@@ -224,8 +137,11 @@
             }
         }
         
-        // Load guide when page loads
-        window.addEventListener('load', loadGuide);
+        // Initialize
+        window.addEventListener('load', () => {
+            initializeTheme();
+            loadGuide();
+        });
     </script>
 </body>
 </html>
