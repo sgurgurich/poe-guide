@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide>
+    <act number="1">
+        <step number="1">
+            <name>Riverbank</name>
+        </step>
+        <step number="2">
+            <name>Town</name>
+        </step>
+        <step number="3">
+            <name>Clearfell</name>
+            <objectives>
+                <objective>Kill Witch for 10% Flat Cold Res</objective>
+                <objective>Find and kill worm if you need skill gem</objective>
+            </objectives>
+        </step>
+        <step number="4">
+            <name>The Grelwood</name>
+            <objectives>
+                <objective>Find waypoint at big tree</objective>
+                <objective>Find The Grim Tangle and enter to get waypoint</objective>
+                <objective>Find witch in hut and kill for 2 medium flasks</objective>
+            </objectives>
+        </step>
+        <step number="5">
+            <name>The Red Vale</name>
+            <objectives>
+                <objective>Find 3 obelisks, kill boss</objective>
+            </objectives>
+        </step>
+        <step number="6">
+            <name>Go back to town</name>
+            <objectives>
+                <objective>Talk to Renly to get item</objective>
+            </objectives>
+        </step>
+        <step number="7">
+            <name>The Grelwood</name>
+            <objectives>
+                <objective>Take item back to The Grelwood tree and use to free Sin</objective>
+                <objective>Talk to Una at tree</objective>
+            </objectives>
+        </step>
+        <step number="8">
+            <name>Go back to town</name>
+            <objectives>
+                <objective>Talk to Una</objective>
+            </objectives>
+        </step>
+        <step number="9">
+            <name>The Grim Tangle</name>
+            <objectives>
+                <objective>Summon Una to break vines and proceed</objective>
+                <objective>Kill miniboss if you need gem</objective>
+            </objectives>
+        </step>
+        <step number="10">
+            <name>Cemetary of the Eternals</name>
+            <objectives>
+                <objective>Find Mausoleum of the Praetor</objective>
+                <objective>Find Mausoleum of the Consort</objective>
+                <objective>Find grave event for a free ring</objective>
+            </objectives>
+        </step>
+        <step number="11">
+            <name>Clear bosses in the Mausoleums</name>
+        </step>
+        <step number="12">
+            <name>Cemetary of the Eternals</name>
+            <objectives>
+                <objective>Talk to guy at waypoint</objective>
+                <objective>Kill boss</objective>
+                <objective>Go back to town after to awaken Sin for auto Identifying items and Respeccing</objective>
+            </objectives>
+        </step>
+        <step number="13">
+            <name>Hunting Grounds</name>
+            <objectives>
+                <objective>Find the Crowbell boss for 2 skill points</objective>
+                <objective>Find Ogham Farmlands zone, enter and get waypoint for later</objective>
+                <objective>Find Freythorn zone</objective>
+            </objectives>
+        </step>
+        <step number="14">
+            <name>Freythorn</name>
+            <objectives>
+                <objective>Find and clear rituals</objective>
+                <objective>Kill King in the Mists for 30 spirit and spirit gem</objective>
+                <objective>If you get to final alter before finding all the small ones, it will emit black wisps pointing to the missing alters</objective>
+            </objectives>
+        </step>
+        <step number="15">
+            <name>Ogham Farmlands</name>
+            <objectives>
+                <objective>Find hut with Una's Lutebox for 2 passive points (turn in at town)</objective>
+                <objective>Find crop circle event for free gem</objective>
+            </objectives>
+        </step>
+        <step number="16">
+            <name>Ogham Village</name>
+            <objectives>
+                <objective>Find Renly's Blacksmithing tools to unlock salvaging</objective>
+                <objective>Kill hangman boss</objective>
+                <objective>CLICK THE LADY IN THE CAGE AT THE END</objective>
+            </objectives>
+        </step>
+        <step number="17">
+            <name>The Manor Ramparts</name>
+            <objectives>
+                <objective>Find the hanging body for free support gem</objective>
+            </objectives>
+        </step>
+        <step number="18">
+            <name>Ogham Manor</name>
+            <objectives>
+                <objective>Scariest zone in the act, be careful</objective>
+                <objective>On the floor you enter into, find the Candle boss for 20 max health</objective>
+                <objective>Kill the Act boss at the end!</objective>
+            </objectives>
+        </step>
+    </act>
+    <act number="2">
+    </act>
+    <act number="3">
+        <step number="1">
+            <name>Sandswept Marsh</name>
+            <objectives>
+                <objective>Miniboss is super optional</objective>
+                <objective>Find camp with chest if you need a free Lesser Jeweller's orb</objective>
+            </objectives>
+        </step>
+        <step number="2">
+            <name>Town</name>
+        </step>
+        <step number="3">
+            <name>Jungle Ruins</name>
+            <objectives>
+                <objective>Kill monkey for 2 passive points</objective>
+                <objective>Find waypoint and The Venom Crypts</objective>
+                <objective>Find Infested Barrens</objective>
+            </objectives>
+        </step>
+        <step number="4">
+            <name>Infested Barrens</name>
+            <objectives>
+                <objective>Find waypoint and travel to The Venom Crypts via Jungle Ruins waypoint</objective>
+            </objectives>
+        </step>
+        <step number="5">
+            <name>The Venom Crypts</name>
+            <objectives>
+                <objective>Find the body with the venom phial</objective>
+                <objective>Bring back to the lady in town</objective>
+                <objective>Choose a reward (usually mana regen or ailment threshold)</objective>
+            </objectives>
+        </step>
+        <step number="6">
+            <name>Infested Barrens</name>
+            <objectives>
+                <objective>Find the Azak Bog</objective>
+            </objectives>
+        </step>
+        <step number="7">
+            <name>Azak Bog</name>
+            <objectives>
+                <objective>Find and kill witch boss for 30 Spirit and spirit gem</objective>
+            </objectives>
+        </step>
+        <step number="8">
+            <name>Infested Barrens</name>
+            <objectives>
+                <objective>Find Chimeral Wetlands</objective>
+            </objectives>
+        </step>
+        <step number="9">
+            <name>Chimeral Wetlands</name>
+            <objectives>
+                <objective>Kill plant rare if you need a free amulet</objective>
+                <objective>Find entrance to Temple of Chaos for later, get waypoint</objective>
+                <objective>Find Chimera boss and kill it, pick up the free ultimatum key</objective>
+                <objective>Enter Jiquani's Machinarium at the BACK of the boss arena</objective>
+            </objectives>
+        </step>
+        <step number="10">
+            <name>Jiquani's Machinarium</name>
+            <objectives>
+                <objective>Find soul core to proceed through first gate</objective>
+                <objective>Find 2 sould cores. DO NOT USE ONE ON THE TREASURE ROOM</objective>
+                <objective>Use 1 for the entrance to Jiquani's Sanctum</objective>
+                <objective>Use the other for the hidden boss, kill him for 10% fire res</objective>
+            </objectives>
+        </step>
+        <step number="11">
+            <name>Jiquani's Sanctum</name>
+            <objectives>
+                <objective>Go left side, find medium soul core, place in left generator</objective>
+                <objective>Waypoint back to beginning</objective>
+                <objective>Go right side, find medium soul core, place in right generator</objective>
+                <objective>RUN BACK TO THE BEGINNING (you have to follow the red light on the ground)</objective>
+                <objective>Kill the boss and take the large soul core it drops</objective>
+            </objectives>
+        </step>
+        <step number="12">
+            <name>Infested Barrens</name>
+            <objectives>
+                <objective>Place large soul core in pedestal next to waypoint</objective>
+            </objectives>
+        </step>
+        <step number="13">
+            <name>The Matlan Waterways</name>
+            <objectives>
+                <objective>Go slow, click levers to move forward.</objective>
+                <objective>Pull big lever at the end and portal to town</objective>
+            </objectives>
+        </step>
+        <step number="14">
+            <name>The Drowned City</name>
+            <objectives>
+                <objective>Go Southeast in town and down the big stairs behind Sin</objective>
+                <objective>Watch out for the water witches and the Drowned Orbs</objective>
+                <objective>Find entrance to the Molten Vault</objective>
+            </objectives>
+        </step>
+        <step number="15">
+            <name>The Molten Vault</name>
+            <objectives>
+                <objective>Get to the end, kill boss for Reforging Bench</objective>
+            </objectives>
+        </step>
+        <step number="16">
+            <name>The Drowned City</name>
+            <objectives>
+                <objective>Find entrance for The Apex of Filth</objective>
+            </objectives>
+        </step>
+        <step number="17">
+            <name>The Apex of Filth</name>
+            <objectives>
+                <objective>Ignore mushrooms that drop</objective>
+                <objective>Kill boss at the end and pick up golden idol</objective>
+            </objectives>
+        </step>
+        <step number="18">
+            <name>Town</name>
+            <objectives>
+                <objective>Bring golden idol to temple door at the bottom of the big stairs</objective>
+            </objectives>
+        </step>
+        <step number="19">
+            <name>The Temple of Kopec</name>
+            <objectives>
+                <objective>Stay in the shade</objective>
+                <objective>Stairs to move forward will always be in the corners of the Triangle</objective>
+                <objective>Get to top and kill the boss</objective>
+                <objective>Talk to Alva in the boss room</objective>
+            </objectives>
+        </step>
+        <step number="20">
+            <name>Utzaal</name>
+            <objectives>
+                <objective>Go through the time portal and down the stairs</objective>
+                <objective>Proceed through town</objective>
+                <objective>Kill as much as you can, you want to find a Sacrifical Heart for a skill point later</objective>
+                <objective>Kill Viper boss (good luck)</objective>
+                <objective>Proceed through town to the Aggorat entrance</objective>
+            </objectives>
+        </step>
+        <step number="21">
+            <name>Aggorat</name>
+            <objectives>
+                <objective>Keep looking for Sacrifical Heart if you still need it</objective>
+                <objective>Proceed through zone, when it gets bloody, start looking for the Sacrifical Alter</objective>
+                <objective>Place heart on alter, stab it with the knife they give you and you get 2 skill points</objective>
+                <objective>Find the entrance to The Black Chambers</objective>
+            </objectives>
+        </step>
+        <step number="22">
+            <name>The Black Chambers</name>
+            <objectives>
+                <objective>Find and 'kill' Doryani</objective>
+            </objectives>
+        </step>
+    </act>
+    <act number="4">
+    </act>
+    <interludes>
+    </interludes>
+</guide>
