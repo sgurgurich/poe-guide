@@ -119,10 +119,6 @@ h1 {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     background: var(--bg-tertiary);
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 
@@ -162,6 +158,8 @@ h1 {
     display: block;
     width: 100%;
     box-sizing: border-box;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 /* Step Styling */
