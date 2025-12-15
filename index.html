@@ -103,7 +103,7 @@
         // Load Guide
         async function loadGuide() {
             try {
-                const response = await fetch('poe2_act_guide.xml');
+                const response = await fetch('data/poe2_act_guide.xml');
                 if (!response.ok) {
                     throw new Error('Failed to load XML file');
                 }

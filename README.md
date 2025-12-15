@@ -30,7 +30,7 @@ An interactive web-based guide for Path of Exile 2 acts with progress tracking a
 
 - `index.html` - Main web interface
 - `styles.css` - Styling and theming
-- `poe2_act_guide.xml` - Guide content structure
+- `data/poe2_act_guide.xml` - Guide content structure
 
 ## Getting Started
 
