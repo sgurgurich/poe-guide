@@ -106,17 +106,11 @@
                         actContent.appendChild(emptyDiv);
                     } else {
                         for (let step of steps) {
-                            const stepNumber = step.getAttribute('number');
                             const nameEl = step.getElementsByTagName('name')[0];
                             const name = nameEl ? nameEl.textContent : 'Unnamed';
                             
                             const stepDiv = document.createElement('div');
                             stepDiv.className = 'step';
-                            
-                            const stepNumberSpan = document.createElement('div');
-                            stepNumberSpan.className = 'step-number';
-                            stepNumberSpan.textContent = `Step ${stepNumber}`;
-                            stepDiv.appendChild(stepNumberSpan);
                             
                             const stepNameDiv = document.createElement('div');
                             stepNameDiv.className = 'step-name';
@@ -125,18 +119,18 @@
                             
                             const objectivesEl = step.getElementsByTagName('objectives')[0];
                             if (objectivesEl) {
-                                const objectivesDiv = document.createElement('div');
-                                objectivesDiv.className = 'objectives';
+                                const objectivesList = document.createElement('ul');
+                                objectivesList.className = 'objectives-list';
                                 
                                 const objectives = objectivesEl.getElementsByTagName('objective');
                                 for (let obj of objectives) {
-                                    const objDiv = document.createElement('div');
-                                    objDiv.className = 'objective';
-                                    objDiv.textContent = obj.textContent;
-                                    objectivesDiv.appendChild(objDiv);
+                                    const objItem = document.createElement('li');
+                                    objItem.className = 'objective-item';
+                                    objItem.textContent = obj.textContent;
+                                    objectivesList.appendChild(objItem);
                                 }
                                 
-                                stepDiv.appendChild(objectivesDiv);
+                                stepDiv.appendChild(objectivesList);
                             }
                             
                             actContent.appendChild(stepDiv);
