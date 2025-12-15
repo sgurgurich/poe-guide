@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<act number="1">
+    <step number="1">
+        <name>Riverbank</name>
+    </step>
+    <step number="2">
+        <name>Town</name>
+    </step>
+    <step number="3">
+        <name>Clearfell</name>
+        <objectives>
+            <objective>Kill Witch for 10% Flat Cold Res</objective>
+            <objective>Find and kill worm if you need skill gem</objective>
+        </objectives>
+    </step>
+    <step number="4">
+        <name>The Grelwood</name>
+        <objectives>
+            <objective>Find waypoint at big tree</objective>
+            <objective>Find The Grim Tangle and enter to get waypoint</objective>
+            <objective>Find witch in hut and kill for 2 medium flasks</objective>
+        </objectives>
+    </step>
+    <step number="5">
+        <name>The Red Vale</name>
+        <objectives>
+            <objective>Find 3 obelisks, kill boss</objective>
+        </objectives>
+    </step>
+    <step number="6">
+        <name>Go back to town</name>
+        <objectives>
+            <objective>Talk to Renly to get item</objective>
+        </objectives>
+    </step>
+    <step number="7">
+        <name>The Grelwood</name>
+        <objectives>
+            <objective>Take item back to The Grelwood tree and use to free Sin</objective>
+            <objective>Talk to Una at tree</objective>
+        </objectives>
+    </step>
+    <step number="8">
+        <name>Go back to town</name>
+        <objectives>
+            <objective>Talk to Una</objective>
+        </objectives>
+    </step>
+    <step number="9">
+        <name>The Grim Tangle</name>
+        <objectives>
+            <objective>Summon Una to break vines and proceed</objective>
+            <objective>Kill miniboss if you need gem</objective>
+        </objectives>
+    </step>
+    <step number="10">
+        <name>Cemetary of the Eternals</name>
+        <objectives>
+            <objective>Find Mausoleum of the Praetor</objective>
+            <objective>Find Mausoleum of the Consort</objective>
+            <objective>Find grave event for a free ring</objective>
+        </objectives>
+    </step>
+    <step number="11">
+        <name>Clear bosses in the Mausoleums</name>
+    </step>
+    <step number="12">
+        <name>Cemetary of the Eternals</name>
+        <objectives>
+            <objective>Talk to guy at waypoint</objective>
+            <objective>Kill boss</objective>
+            <objective>Go back to town after to awaken Sin for auto Identifying items and Respeccing</objective>
+        </objectives>
+    </step>
+    <step number="13">
+        <name>Hunting Grounds</name>
+        <objectives>
+            <objective>Find the Crowbell boss for 2 skill points</objective>
+            <objective>Find Ogham Farmlands zone, enter and get waypoint for later</objective>
+            <objective>Find Freythorn zone</objective>
+        </objectives>
+    </step>
+    <step number="14">
+        <name>Freythorn</name>
+        <objectives>
+            <objective>Find and clear rituals</objective>
+            <objective>Kill King in the Mists for 30 spirit and spirit gem</objective>
+            <objective>If you get to final alter before finding all the small ones, it will emit black wisps pointing to the missing alters</objective>
+        </objectives>
+    </step>
+    <step number="15">
+        <name>Ogham Farmlands</name>
+        <objectives>
+            <objective>Find hut with Una's Lutebox for 2 passive points (turn in at town)</objective>
+            <objective>Find crop circle event for free gem</objective>
+        </objectives>
+    </step>
+    <step number="16">
+        <name>Ogham Village</name>
+        <objectives>
+            <objective>Find Renly's Blacksmithing tools to unlock salvaging</objective>
+            <objective>Kill hangman boss</objective>
+            <objective>CLICK THE LADY IN THE CAGE AT THE END</objective>
+        </objectives>
+    </step>
+    <step number="17">
+        <name>The Manor Ramparts</name>
+        <objectives>
+            <objective>Find the hanging body for free support gem</objective>
+        </objectives>
+    </step>
+    <step number="18">
+        <name>Ogham Manor</name>
+        <objectives>
+            <objective>Scariest zone in the act, be careful</objective>
+            <objective>On the floor you enter into, find the Candle boss for 20 max health</objective>
+            <objective>Kill the Act boss at the end!</objective>
+        </objectives>
+    </step>
+</act>

@@ -101,26 +101,58 @@
         });
 
         // Load Guide
-        async function loadGuide() {
+        async function loadActFromFile(actNumber) {
             try {
-                const response = await fetch('data/poe2_act_guide.xml');
+                const response = await fetch(`data/act${actNumber}.xml`);
                 if (!response.ok) {
-                    throw new Error('Failed to load XML file');
+                    throw new Error(`Failed to load act${actNumber}.xml`);
                 }
                 const xmlText = await response.text();
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
                 
                 if (xmlDoc.getElementsByTagName('parsererror').length > 0) {
-                    throw new Error('XML parsing error');
+                    throw new Error(`XML parsing error in act${actNumber}.xml`);
                 }
                 
+                return xmlDoc.getElementsByTagName('act')[0];
+            } catch (error) {
+                console.error(`Error loading act ${actNumber}:`, error);
+                return null;
+            }
+        }
+
+        async function loadInterludesFromFile() {
+            try {
+                const response = await fetch('data/interludes.xml');
+                if (!response.ok) {
+                    throw new Error('Failed to load interludes.xml');
+                }
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                
+                if (xmlDoc.getElementsByTagName('parsererror').length > 0) {
+                    throw new Error('XML parsing error in interludes.xml');
+                }
+                
+                return xmlDoc.getElementsByTagName('interludes')[0];
+            } catch (error) {
+                console.error('Error loading interludes:', error);
+                return null;
+            }
+        }
+
+        async function loadGuide() {
+            try {
                 const content = document.getElementById('content');
                 content.innerHTML = '';
                 
-                const acts = xmlDoc.getElementsByTagName('act');
-                
-                for (let act of acts) {
+                // Load all 4 acts
+                for (let i = 1; i <= 4; i++) {
+                    const act = await loadActFromFile(i);
+                    if (!act) continue;
+                    
                     const actNumber = act.getAttribute('number');
                     const actSectionId = `act-${actNumber}`;
                     const actDiv = document.createElement('div');
@@ -247,12 +279,10 @@
                             addExpandedSection(actSectionId);
                         }
                     });
-                    
-                    content.appendChild(actDiv);
                 }
                 
-                // Handle Interludes
-                const interludes = xmlDoc.getElementsByTagName('interludes')[0];
+                // Load Interludes
+                const interludes = await loadInterludesFromFile();
                 if (interludes) {
                     const interludeSectionId = 'interludes';
                     const interludeDiv = document.createElement('div');
@@ -304,7 +334,7 @@
                 }
             } catch (error) {
                 const content = document.getElementById('content');
-                content.innerHTML = `<div class="error">Error loading guide: ${error.message}<br><br>Make sure poe2_act_guide.xml is in the same directory as this HTML file.</div>`;
+                content.innerHTML = `<div class="error">Error loading guide: ${error.message}<br><br>Make sure the data directory with individual XML files exists.</div>`;
                 console.error('Error:', error);
             }
         }
