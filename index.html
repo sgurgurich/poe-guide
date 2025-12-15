@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POE2 Act Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .act {
+            margin-bottom: 40px;
+            border-left: 4px solid #ffd700;
+            padding-left: 20px;
+        }
+        
+        .act-title {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .act-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ffd700;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .step {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 215, 0, 0.4);
+        }
+        
+        .step-number {
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 1.1em;
+        }
+        
+        .step-name {
+            font-size: 1.2em;
+            color: #ffffff;
+            margin: 5px 0;
+        }
+        
+        .objectives {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        .objective {
+            padding: 8px 0;
+            padding-left: 15px;
+            color: #b0b0b0;
+            position: relative;
+            font-size: 0.95em;
+        }
+        
+        .objective::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .empty-act {
+            color: #888;
+            font-style: italic;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #ffd700;
+            font-size: 1.2em;
+        }
+        
+        .error {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+            color: #ff6b6b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Path of Exile 2 - Act Guide</h1>
+        <div id="content" class="loading">Loading guide...</div>
+    </div>
+
+    <script>
+        async function loadGuide() {
+            try {
+                const response = await fetch('poe2_act_guide.xml');
+                if (!response.ok) {
+                    throw new Error('Failed to load XML file');
+                }
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                
+                if (xmlDoc.getElementsByTagName('parsererror').length > 0) {
+                    throw new Error('XML parsing error');
+                }
+                
+                const content = document.getElementById('content');
+                content.innerHTML = '';
+                
+                const acts = xmlDoc.getElementsByTagName('act');
+                
+                for (let act of acts) {
+                    const actNumber = act.getAttribute('number');
+                    const actDiv = document.createElement('div');
+                    actDiv.className = 'act';
+                    
+                    const actTitle = document.createElement('div');
+                    actTitle.className = 'act-title';
+                    actTitle.textContent = `Act ${actNumber}`;
+                    actDiv.appendChild(actTitle);
+                    
+                    const steps = act.getElementsByTagName('step');
+                    
+                    if (steps.length === 0) {
+                        const emptyDiv = document.createElement('div');
+                        emptyDiv.className = 'empty-act';
+                        emptyDiv.textContent = 'Content coming soon...';
+                        actDiv.appendChild(emptyDiv);
+                    } else {
+                        for (let step of steps) {
+                            const stepNumber = step.getAttribute('number');
+                            const nameEl = step.getElementsByTagName('name')[0];
+                            const name = nameEl ? nameEl.textContent : 'Unnamed';
+                            
+                            const stepDiv = document.createElement('div');
+                            stepDiv.className = 'step';
+                            
+                            const stepNumberSpan = document.createElement('div');
+                            stepNumberSpan.className = 'step-number';
+                            stepNumberSpan.textContent = `Step ${stepNumber}`;
+                            stepDiv.appendChild(stepNumberSpan);
+                            
+                            const stepNameDiv = document.createElement('div');
+                            stepNameDiv.className = 'step-name';
+                            stepNameDiv.textContent = name;
+                            stepDiv.appendChild(stepNameDiv);
+                            
+                            const objectivesEl = step.getElementsByTagName('objectives')[0];
+                            if (objectivesEl) {
+                                const objectivesDiv = document.createElement('div');
+                                objectivesDiv.className = 'objectives';
+                                
+                                const objectives = objectivesEl.getElementsByTagName('objective');
+                                for (let obj of objectives) {
+                                    const objDiv = document.createElement('div');
+                                    objDiv.className = 'objective';
+                                    objDiv.textContent = obj.textContent;
+                                    objectivesDiv.appendChild(objDiv);
+                                }
+                                
+                                stepDiv.appendChild(objectivesDiv);
+                            }
+                            
+                            actDiv.appendChild(stepDiv);
+                        }
+                    }
+                    
+                    content.appendChild(actDiv);
+                }
+            } catch (error) {
+                const content = document.getElementById('content');
+                content.innerHTML = `<div class="error">Error loading guide: ${error.message}<br><br>Make sure poe2_act_guide.xml is in the same directory as this HTML file.</div>`;
+                console.error('Error:', error);
+            }
+        }
+        
+        // Load guide when page loads
+        window.addEventListener('load', loadGuide);
+    </script>
+</body>
+</html>
