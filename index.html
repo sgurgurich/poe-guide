@@ -87,7 +87,7 @@
                     
                     const actToggle = document.createElement('span');
                     actToggle.className = 'act-toggle';
-                    actToggle.textContent = '▼';
+                    actToggle.textContent = '▶';
                     
                     actHeader.appendChild(actToggle);
                     actHeader.appendChild(actTitle);
@@ -95,7 +95,7 @@
                     
                     const actContent = document.createElement('div');
                     actContent.className = 'act-content';
-                    actContent.style.display = 'block';
+                    actContent.style.display = 'none';
                     
                     const steps = act.getElementsByTagName('step');
                     
