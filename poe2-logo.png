@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- Quantcast Choice -->
+<script type="text/javascript" async=true>
+!function(){var t=window.location.hostname,e=document.createElement("script"),a=document.getElementsByTagName("script")[0],n="https://quantcast.mgr.consensu.org".concat("/choice/","qQv-cquBEL7ht","/",t,"/choice.js"),i=0;e.async=!0,e.type="text/javascript",e.src=n,a.parentNode.insertBefore(e,a),function(){for(var t,e="__tcfapiLocator",a=[],n=window;n;){try{if(n.frames.__tcfapiLocator){t=n;break}}catch(t){}if(n===window.top)break;n=n.parent}t||(!function t(){var a=n.document,i=!!n.frames.__tcfapiLocator;if(!i)if(a.body){var o=a.createElement("iframe");o.style.cssText="display:none",o.name=e,a.body.appendChild(o)}else setTimeout(t,5);return!i}(),n.__tcfapi=function(){var t,e=arguments;if(!e.length)return a;if("setGdprApplies"===e[0])e.length>3&&2===e[2]&&"boolean"==typeof e[3]&&(t=e[3],"function"==typeof e[2]&&e[2]("set",!0));else if("ping"===e[0]){var n={gdprApplies:t,cmpLoaded:!1,cmpStatus:"stub"};"function"==typeof e[2]&&e[2](n)}else a.push(e)},n.addEventListener("message",(function(t){var e="string"==typeof t.data,a={};try{a=e?JSON.parse(t.data):t.data}catch(t){}var n=a.__tcfapiCall;n&&window.__tcfapi(n.command,n.version,(function(a,i){var o={__tcfapiReturn:{returnValue:a,success:i,callId:n.callId}};e&&(o=JSON.stringify(o)),t.source.postMessage(o,"*")}),n.parameter)}),!1))}();var o=function(){var t=arguments;typeof window.__uspapi!==o&&setTimeout((function(){void 0!==window.__uspapi&&window.__uspapi.apply(window.__uspapi,t)}),500)};if(void 0===window.__uspapi){window.__uspapi=o;var c=setInterval((function(){i++,window.__uspapi===o&&i<3?console.warn("USP is not accessible"):clearInterval(c)}),6e3)}}();
+</script>
+<!-- End Quantcast Choice -->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-1961410-1"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','UA-1961410-1')
+</script>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=XBJkP">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=XBJkP">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=XBJkP">
+<link rel="manifest" href="/site.webmanifest?v=XBJkP">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=XBJkP" color="#666">
+<link rel="shortcut icon" href="/favicon.ico?v=XBJkP">
+<meta name="apple-mobile-web-app-title" content="Creative Uncut">
+<meta name="application-name" content="Creative Uncut">
+<meta name="msapplication-TileColor" content="#ecede8">
+<meta name="theme-color" content="#fff"><meta name="viewport" content="width=device-width">
+<title>404 - Not Found</title>
+<meta name="description" content="The requested web page or file could not be found on this server.">
+<meta name="title" content="404 - Not Found">
+<link rel="stylesheet" href="https://www.creativeuncut.com/style.css" type="text/css">
+</head>
+
+
+<body>
+<script>
+<!--
+var rnd=new Array()
+
+rnd[0]="https://creativeuncut.com/art_aion_a.html"
+rnd[1]="https://creativeuncut.com/art_akai-katana_a.html"
+rnd[2]="https://creativeuncut.com/art_akibas-beat_a.html"
+rnd[3]="https://creativeuncut.com/art_all-points-bulletin_a.html"
+rnd[4]="https://creativeuncut.com/art_assassins-creed-4-black-flag_a.html"
+rnd[5]="https://creativeuncut.com/art_atelier-rorona-the-alchemist-of-arland_a.html"
+rnd[6]="https://creativeuncut.com/art_atelier-totori-the-adventurer-of-arland_a.html"
+rnd[7]="https://creativeuncut.com/art_atlantica-online_a.html"
+rnd[8]="https://creativeuncut.com/art_avalon-code_a.html"
+rnd[9]="https://creativeuncut.com/art_azure-striker-gunvolt-2_a.html"
+rnd[10]="https://creativeuncut.com/art_batman-arkham-origins_a.html"
+rnd[11]="https://creativeuncut.com/art_beyond-two-souls_a.html"
+rnd[12]="https://creativeuncut.com/art_blade-and-soul_a.html"
+rnd[13]="https://creativeuncut.com/art_blazblue-central-fiction_a.html"
+rnd[14]="https://creativeuncut.com/art_borderlands-2_a.html"
+rnd[15]="https://creativeuncut.com/art_capcom-vs-snk_a.html"
+rnd[16]="https://creativeuncut.com/art_castlevania-lords-of-shadow-mirror-of-fate_a.html"
+rnd[17]="https://creativeuncut.com/art_catherine_a.html"
+rnd[18]="https://creativeuncut.com/art_children-of-mana_a.html"
+rnd[19]="https://creativeuncut.com/art_cross-edge_a.html"
+rnd[20]="https://creativeuncut.com/art_cryamore_a.html"
+rnd[21]="https://creativeuncut.com/art_darksiders_a.html"
+rnd[22]="https://creativeuncut.com/art_dark-souls_a.html"
+rnd[23]="https://creativeuncut.com/art_dark-souls-2_a.html"
+rnd[24]="https://creativeuncut.com/art_deadpool_a.html"
+rnd[25]="https://creativeuncut.com/art_dead-space_a.html"
+rnd[26]="https://creativeuncut.com/art_dead-space-3_a.html"
+rnd[27]="https://creativeuncut.com/art_depth-fantasia_a.html"
+rnd[28]="https://creativeuncut.com/art_destiny_a.html"
+rnd[29]="https://creativeuncut.com/art_deus-ex-human-revolution_a.html"
+rnd[30]="https://creativeuncut.com/art_devil-may-cry-3-dantes-awakening_a.html"
+rnd[31]="https://creativeuncut.com/art_diablo-3_a.html"
+rnd[32]="https://creativeuncut.com/art_disgaea-3-absence-of-justice_a.html"
+rnd[33]="https://creativeuncut.com/art_disgaea-4-a-promise-unforgotten_a.html"
+rnd[34]="https://creativeuncut.com/art_dishonored_a.html"
+rnd[35]="https://creativeuncut.com/art_dishonored-2_a.html"
+rnd[36]="https://creativeuncut.com/art_dissidia-012-final-fantasy_a.html"
+rnd[37]="https://creativeuncut.com/art_dissidia-final-fantasy_a.html"
+rnd[38]="https://creativeuncut.com/art_doom-2016_a.html"
+rnd[39]="https://creativeuncut.com/art_doom-2016_a.html"
+rnd[40]="https://creativeuncut.com/art_dragon-age-origins_a.html"
+rnd[41]="https://creativeuncut.com/art_dragons-crown_a.html"
+rnd[42]="https://creativeuncut.com/art_drakengard-3_a.html"
+rnd[43]="https://creativeuncut.com/art_the-elder-scrolls-online_a.html"
+rnd[44]="https://creativeuncut.com/art_elsword_a.html"
+rnd[45]="https://creativeuncut.com/art_eternal-sonata_a.html"
+rnd[46]="https://creativeuncut.com/art_everquest-next_a.html"
+rnd[47]="https://creativeuncut.com/art_fable-2_a.html"
+rnd[48]="https://creativeuncut.com/art_fate-extella-the-umbral-star_a.html"
+rnd[49]="https://creativeuncut.com/art_final-fantasy-3_a.html"
+rnd[50]="https://creativeuncut.com/art_final-fantasy-4-the-after-years_a.html"
+rnd[51]="https://creativeuncut.com/art_final-fantasy-6_a.html"
+rnd[52]="https://creativeuncut.com/art_final-fantasy-7_a.html"
+rnd[53]="https://creativeuncut.com/art_final-fantasy-8_a.html"
+rnd[54]="https://creativeuncut.com/art_final-fantasy-10_a.html"
+rnd[55]="https://creativeuncut.com/art_final-fantasy-11_a.html"
+rnd[56]="https://creativeuncut.com/art_final-fantasy-14-version-2_a.html"
+rnd[57]="https://creativeuncut.com/art_final-fantasy-14-heavensward_a.html"
+rnd[58]="https://creativeuncut.com/art_final-fantasy-14-stormblood_a.html"
+rnd[59]="https://creativeuncut.com/art_final-fantasy-tactics_a.html"
+rnd[60]="https://creativeuncut.com/art_final-fantasy-tactics-a2-grimoire-of-the-rift_a.html"
+rnd[61]="https://creativeuncut.com/art_fire-emblem-awakening_a.html"
+rnd[62]="https://creativeuncut.com/art_folklore_a.html"
+rnd[63]="https://creativeuncut.com/art_god-of-war-3_a.html"
+rnd[64]="https://creativeuncut.com/art_granado-espada_a.html"
+rnd[65]="https://creativeuncut.com/art_gravity-rush_a.html"
+rnd[66]="https://creativeuncut.com/art_grimgrimoire_a.html"
+rnd[67]="https://creativeuncut.com/art_guild-wars-2_a.html"
+rnd[68]="https://creativeuncut.com/art_guild-wars-factions_a.html"
+rnd[69]="https://creativeuncut.com/art_guild-wars-nightfall_a.html"
+rnd[70]="https://creativeuncut.com/art_guilty-gear-2-overture_a.html"
+rnd[71]="https://creativeuncut.com/art_gunz-2-the-second-duel_a.html"
+rnd[72]="https://creativeuncut.com/art_hearthstone-heroes-of-warcraft_a.html"
+rnd[73]="https://creativeuncut.com/art_heavy-rain_a.html"
+rnd[74]="https://creativeuncut.com/art_heroes-of-mana_a.html"
+rnd[75]="https://creativeuncut.com/art_heroes-of-the-storm_a.html"
+rnd[76]="https://creativeuncut.com/art_injustice-gods-among-us_a.html"
+rnd[77]="https://creativeuncut.com/art_journey_a.html"
+rnd[78]="https://creativeuncut.com/art_kingdom-hearts_a.html"
+rnd[79]="https://creativeuncut.com/art_king-of-fighters-2000_a.html"
+rnd[80]="https://creativeuncut.com/art_king-of-fighters-xiii_a.html"
+rnd[81]="https://creativeuncut.com/art_la-pucelle-tactics_a.html"
+rnd[82]="https://creativeuncut.com/art_the-last-of-us_a.html"
+rnd[83]="https://creativeuncut.com/art_the-last-story_a.html"
+rnd[84]="https://creativeuncut.com/art_league-of-legends_a.html"
+rnd[85]="https://creativeuncut.com/art_the-legend-of-heroes-trails-in-the-flash_a.html"
+rnd[86]="https://creativeuncut.com/art_the-legend-of-zelda-breath-of-the-wild_a.html"
+rnd[87]="https://creativeuncut.com/art_legend-of-zelda-ocarina-of-time-3d_a.html"
+rnd[88]="https://creativeuncut.com/art_mabinogi-2-arena_a.html"
+rnd[89]="https://creativeuncut.com/art_magna-carta-tears-of-blood_a.html"
+rnd[90]="https://creativeuncut.com/art_mana-khemia-2-fall-of-alchemy_a.html"
+rnd[91]="https://creativeuncut.com/art_marvel-vs-capcom-2_a.html"
+rnd[92]="https://creativeuncut.com/art_mass-effect_a.html"
+rnd[93]="https://creativeuncut.com/art_mega-man-battle-network-5_a.html"
+rnd[94]="https://creativeuncut.com/art_mega-man-zx-advent_a.html"
+rnd[95]="https://creativeuncut.com/art_metal-gear-solid-3-snake-eater_a.html"
+rnd[96]="https://creativeuncut.com/art_mind-0_a.html"
+rnd[97]="https://creativeuncut.com/art_mortal-kombat-x_a.html"
+rnd[98]="https://creativeuncut.com/art_muramasa-the-demon-blade_a.html"
+rnd[99]="https://creativeuncut.com/art_neogeo-battle-coliseum_a.html"
+rnd[100]="https://creativeuncut.com/art_nier-automata_a.html"
+
+function randomlink(){
+window.location=rnd[Math.floor(Math.random()*rnd.length)]
+}
+//-->
+</script>
+
+
+<div id="main">
+
+
+<div id="head">
+<div id="logo_o"><a id="logo_i" href="https://www.creativeuncut.com" title="Creative Uncut - Video Game Art"><b>Video Game Art Library</b></a></div>
+
+<div id="home">
+<a class="nav" href="https://www.creativeuncut.com"><span class="t1">HOME</span></a>
+</div>
+
+<div id="art">
+<a class="nav" href="https://www.creativeuncut.com/game-art-galleries.html">
+<span class="t1">VIDEO GAME</span>
+<span class="t2">CONCEPT ART</span>
+</a>
+</div>
+
+<div id="artist">
+<a class="nav" href="https://www.creativeuncut.com/video-game-artists.html">
+<span class="t1">GAME</span>
+<span class="t2">ARTISTS</span>
+</a>
+</div>
+
+<div id="random">
+<a class="nav" href="https://www.creativeuncut.com/art_suikoden-3_a.html" onmouseover="randomgallery(this,event)" onmouseout="randomgallery(this,event)" onclick="randomgallery(this,event)"><span class="t1">RANDOM GAME</span> <span class="t2">ART GALLERY</span></a></div>
+
+<div id="contact">
+<a class="nav" href="https://www.creativeuncut.com/info.html">
+<span class="t2">CONTACT</span>
+</a>
+</div>
+
+
+<div id="search">
+
+<div id="s_tip">
+CU's concept art library has 99,062 artworks from 2,648 games.
+</div>
+
+<div id="s_box">
+
+<script>
+  (function() {
+    var cx = 'partner-pub-5856787731677035:2584626215';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.defer = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+  window.onload = function(){
+  document.getElementById('gsc-i-id1').placeholder = 'Search Creative Uncut';
+};
+</script>
+<gcse:search>
+</gcse:search>
+
+</div>
+</div>
+</div>
+
+
+
+<div id="body">
+
+
+<div style="float: left; width: 90%; padding: 25px 5% 90px; background: url('https://www.creativeuncut.com/imgs/servbots.jpg') center 95px/auto no-repeat;">
+<h1>404, NOT FOUND</h1>
+<br>
+Oh no! You baroque the website!<br>
+<div style="height: 237px;"></div>
+Actually, the Servbots are probably just suffering from artist's block and were unable to render the requested web page or file. 
+Details are sketchy and we have no concept of what went wrong, but we can draw some conclusions. 
+Possible reasons you are seeing this error include:<br>
+<div style="padding: 55px 0px;">
+The Servbot maintenance squad is to blame. Kick them!<br>
+<br>
+The web page or file never existed to begin with.<br>
+<br>
+The URL to the web page or file was misspelled.<br>
+<br>
+The web page or file has been renamed.<br>
+<br>
+The web page or file was deleted.<br>
+<br>
+The web page or file was...sorry, I'm drawing a blank.<br>
+</div>
+If you arrived at this 404 page via a broken link, feel free to <a href="https://www.creativeuncut.com/info.html">report the issue</a> and provide some perspective about where it was encountered. 
+If I can't easel-y fix it, I'll get back to the drawing board and try to bristle up an idea.
+</div>
+
+
+</div><!-- body end -->
+</div><!-- main end -->
+
+
+<div id="footer">
+
+<div id="footer_i">
+
+<div id="footer_r">
+	<div id="soc_icons"><a href="https://www.creativeuncut.com/feed.xml" target="_blank" title="Follow via RSS">&nbsp;</a><a href="https://www.instagram.com/creativeuncutdotcom/" target="_blank" title="Follow via Instagram">&nbsp;</a><a href="https://www.facebook.com/creativeuncut" target="_blank" title="Follow via Facebook">&nbsp;</a><a href="https://www.twitter.com/creativeuncut" target="_blank" title="Follow via Twitter">&nbsp;</a><a href="https://www.pinterest.com/creativeuncut" target="_blank" title="Follow via Pinterest">&nbsp;</a></div>
+	<div id="soc_txt">CU offers 5 ways to follow us so your news feed will never lack new art and inspiration. Get daily updates for video game art galleries packed with loads of concept art, character artwork, and promotional pictures.</div>
+</div>
+
+<div id="footer_m">
+</div>
+
+<div id="footer_l">
+	<p class="ftr_title">WEBSITE INFO</p>
+	&copy; Creative Uncut 2003&ndash;2025<br>
+	<a href="https://www.creativeuncut.com/privacy.html">Privacy Policy &amp; Amazon Disclaimer</a><br>
+	<a href="https://www.creativeuncut.com/about-us.html">About Us</a><br>
+	<span data-ccpa-link="1"></span><br>
+	<div id="ncmp-consent-link"></div>
+</div>
+
+</div>
+
+<div id="amzn-assoc-ad-384924c4-b470-4b0a-83f8-3afe38901383"></div><script async src="https://z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=384924c4-b470-4b0a-83f8-3afe38901383"></script>
+
+</div>
+
+
+</body>
+
+
+</html>
